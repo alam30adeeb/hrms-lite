@@ -1,12 +1,18 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from app.routes import employee, attendance
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="HRMS Lite API")
 
+origins = [
+    "http://localhost:5173",
+    "https://your-vercel-app-name.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For development
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
