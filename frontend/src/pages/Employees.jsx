@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "https://hrms-backend-7fos.onrender.com/";
+const API = "https://hrms-backend-7fos.onrender.com";
 
 function Employees() {
   const [employees, setEmployees] = useState([]);
